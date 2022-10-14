@@ -1,0 +1,23 @@
+# Instalar venv
+apt install python3-venv
+
+# Crear el entorno virtual
+python3 -m venv venv
+
+# Activar el entorno virtual
+. venv/bin/activate
+
+# Instalar django
+pip install django
+
+# Iniciar versionamiento
+git init
+
+# Crear proyecto django
+django-admin startproject premiosplatziapp
+
+# Iniciar servidor
+python3 manage.py runserver 0:7000
+
+# Crear aplicacion
+python3 manage.py startapp polls
