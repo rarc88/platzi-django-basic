@@ -21,3 +21,22 @@ python3 manage.py runserver 0:7000
 
 # Crear aplicacion
 python3 manage.py startapp polls
+
+# Agregar la nueva aplicacion a array de INSTALLED_APPS en settings.py
+
+# Crear migraciones
+python3 manage.py makemigrations polls
+
+# Ejecutar migraciones
+python3 manage.py migrate
+
+# Consola interactiva
+python3 manage.py shell
+
+# Practica con la consola interactiva
+from polls.models import Question, Choice
+Question.objects.all()
+
+from django.utils import timezone
+q = Question(question_text='Te gusta este curso?', pub_date=timezone.now())
+q.save()
